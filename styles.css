@@ -552,13 +552,13 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   margin-top: 2rem;
+  gap: 1rem;
 }
 
 .masonry-column {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0 0.5rem;
 }
 
 .masonry-item {
@@ -589,18 +589,18 @@ h6 {
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .masonry-column {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 0.5rem);
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
   .masonry-column {
-    flex-basis: 33.333%;
+    flex-basis: calc(33.333% - 0.67rem);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .masonry-column {
-    flex-basis: 25%;
+    flex-basis: calc(25% - 0.75rem);
   }
 }
