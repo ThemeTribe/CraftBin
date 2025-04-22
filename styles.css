@@ -79,8 +79,14 @@ h6 {
   font-style: normal;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .container {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .section-header {
@@ -90,26 +96,21 @@ h6 {
   background-color: #353535;
   color: #fefefe;
   text-align: center;
-}
-
-.section-header.container,
-.section-title.container {
-  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
 @media screen and (min-width: 969px) {
+  main {
+    gap: 3rem;
+  }
+
   .container {
-    padding: 1rem 2rem;
+    padding: 0 2rem;
   }
 
   .section-header {
     gap: 1rem;
     text-align: left;
-  }
-
-  .section-header.container {
-    padding-top: 3rem;
     padding-bottom: 3rem;
   }
 }
@@ -345,15 +346,19 @@ h6 {
   }
   
   /* Add padding to main content to account for fixed header */
-  main {
-    padding-top: 70px;
+  main,
+  .section-header,
+  .section-title {
+    padding-top: 50px;
   }
 }
 
 @media screen and (min-width: 969px) {
   /* Add padding to main content to account for fixed header */
-  main {
-    padding-top: 80px;
+  main,
+  .section-header,
+  .section-title {
+    padding-top: 60px;
   }
 }
 
@@ -414,11 +419,6 @@ h6 {
   justify-content: center;
 }
 
-.image-and-text.container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .image-and-text.container.alternate {
   flex-direction: column;
 }
@@ -438,6 +438,15 @@ h6 {
   width: 100%;
 }
 
+.image-and-text-content ul {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
 @media screen and (min-width: 969px) {
   .image-and-text {
     flex-direction: row;
@@ -445,8 +454,6 @@ h6 {
 
   .image-and-text.container {
     gap: 1.5rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
   }
 
   .image-and-text.container.alternate {
@@ -468,12 +475,6 @@ h6 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin-top: 2rem;
-}
-
-.catalogue-container.container {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
 }
 
 .catalogue-item {
@@ -526,11 +527,6 @@ h6 {
   .catalogue-item img {
     height: 350px;
   }
-
-  .catalogue-container.container {
-    padding-top: 3rem;
-    padding-bottom: 6rem;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -540,7 +536,6 @@ h6 {
 }
 
 .catalogue-benefits {
-  background-color: #f1f1f1;
   border-radius: 8px;
   text-align: center;
 }
@@ -550,7 +545,7 @@ h6 {
 }
 
 .catalogue-benefits.container {
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .catalogue-benefits ul {
@@ -568,7 +563,7 @@ h6 {
   }
 
   .catalogue-benefits.container {
-    padding: 3rem;
+    padding: 0 3rem;
   }
 }
 
@@ -580,7 +575,6 @@ h6 {
 .masonry-gallery {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2rem;
   gap: 1rem;
 }
 
@@ -724,4 +718,16 @@ h6 {
   stroke: #ffffff;
   width: 24px;
   height: 24px;
+}
+
+.spec-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spec-images img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
