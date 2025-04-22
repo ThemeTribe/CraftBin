@@ -92,7 +92,8 @@ h6 {
   text-align: center;
 }
 
-.section-header.container {
+.section-header.container,
+.section-title.container {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
