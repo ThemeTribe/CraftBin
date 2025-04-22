@@ -779,8 +779,7 @@ main {
   align-items: flex-start;
   gap: 1.1rem;
 }
-.footer-logo svg {
-  display: block;
+.footer-logo {
   margin-bottom: 0.6rem;
 }
 .footer-desc {
@@ -814,6 +813,14 @@ main {
 .footer-links a:hover {
   color: #f6a700;
 }
+.footer-title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+  color: #fefefe;
+}
 .footer-bottom {
   text-align: center;
   margin-top: 2.2rem;
@@ -832,7 +839,7 @@ main {
     align-items: center;
     text-align: center;
   }
-  .footer-logo svg {
+  .footer-logo {
     margin-bottom: 0.4rem;
   }
   .footer-bottom {
