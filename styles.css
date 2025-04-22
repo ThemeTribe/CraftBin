@@ -465,81 +465,105 @@ h6 {
 /*========== Catalogue Section ==========*/
 .catalogue-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .catalogue-container.container {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .catalogue-item {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalogue-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  height: 100%;
+  padding-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalogue-item a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .catalogue-item img {
   width: 100%;
-  height: 180px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 4px;
-  aspect-ratio: 1 / 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 969px) {
+.catalogue-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
   .catalogue-container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
   }
 
   .catalogue-item img {
     height: 350px;
-    aspect-ratio: 1 / 1;
   }
 
   .catalogue-container.container {
-    gap: 1.5rem;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .catalogue-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .catalogue-benefits {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: #f1f1f1;
+  border-radius: 8px;
   text-align: center;
-  gap: 1rem;
-  width: 100%;
+}
+
+.catalogue-benefits h2 {
+  margin-bottom: 1.5rem;
 }
 
 .catalogue-benefits.container {
-  padding-top: 2rem;
+  padding: 2rem;
 }
 
 .catalogue-benefits ul {
+  text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  width: 100%;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
 }
 
 @media screen and (min-width: 969px) {
-  .catalogue-benefits {
-    gap: 1.5rem;
-    text-align: left;
-    align-items: flex-start;
-  }
-
   .catalogue-benefits.container {
-    gap: 1.5rem;
-    padding-top: 3rem;
+    padding: 3rem;
   }
 }
 
