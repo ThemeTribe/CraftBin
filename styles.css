@@ -8,6 +8,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #252525;
+  background-color: #fefefe;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -356,7 +357,7 @@ h6 {
   height: 100%;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .main-hero-section .main-hero-content {
