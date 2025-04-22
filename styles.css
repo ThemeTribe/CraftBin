@@ -731,3 +731,28 @@ main {
   height: auto;
   object-fit: contain;
 }
+
+/* Image Showcase */
+.image-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.image-showcase-item {
+  width: 100%;
+  max-width: 100%;
+}
+
+.image-showcase-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+  
+@media screen and (min-width: 969px) {
+  .image-showcase-item {
+    width: unset;
+    max-width: 66%;
+  }
+}
