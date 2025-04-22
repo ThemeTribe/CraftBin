@@ -7,7 +7,7 @@ body {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
+  color: #252525;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,6 +43,12 @@ picture {
   max-width: 100%;
 }
 
+/* Global link styles */
+a, a:visited, a:hover, a:active, a:focus {
+  color: #252525;
+  text-decoration: none;
+}
+
 input,
 button,
 select,
@@ -72,6 +78,16 @@ h6 {
   font-style: normal;
 }
 
+.container {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 969px) {
+  .container {
+    padding: 1rem 2rem;
+  }
+}
+
 /*========== Header Styles ==========*/
 .site-header {
   width: 100%;
@@ -89,7 +105,6 @@ h6 {
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: minmax(0, auto);
   align-items: center;
-  padding: 1rem 2rem;
   height: 80px;
 }
 
@@ -120,15 +135,10 @@ h6 {
 }
 
 .main-nav .menu li a {
-  color: #333;
+  color: #252525;
   text-decoration: none;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
   position: relative;
-}
-
-.main-nav .menu li a:hover {
-  color: #667eea;
 }
 
 .dropdown {
@@ -196,7 +206,6 @@ h6 {
   display: none;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  padding: 1rem;
   height: 70px;
 }
 
@@ -204,7 +213,7 @@ h6 {
   font-family: "Libre Baskerville", serif;
   font-weight: 700;
   font-size: 1.5rem;
-  color: #333;
+  color: #252525;
   text-decoration: none;
   text-align: center;
   display: block;
@@ -248,7 +257,7 @@ h6 {
 }
 
 .mobile-nav .menu li a {
-  color: #333;
+  color: #252525;
   text-decoration: none;
   font-size: 1.2rem;
   display: block;
@@ -301,8 +310,6 @@ h6 {
   /* Add padding to main content to account for fixed header */
   main {
     padding-top: 70px;
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }
 
@@ -353,5 +360,10 @@ h6 {
   color: #fefefe;
   padding: 0 1rem;
   gap: 1.5rem;
-  width: 50%;
+}
+
+@media screen and (min-width: 969px) {
+  .main-hero-section .main-hero-content {
+    width: 50%;
+  }
 }
