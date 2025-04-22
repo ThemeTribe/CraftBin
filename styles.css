@@ -775,7 +775,7 @@ img {
 @media screen and (min-width: 969px) {
   .image-showcase-item {
     width: unset;
-    max-width: 66%;
+    max-width: 22%;
   }
 }
 
