@@ -562,6 +562,10 @@ h6 {
 }
 
 @media screen and (min-width: 969px) {
+  .catalogue-benefits {
+    text-align: left;
+  }
+
   .catalogue-benefits.container {
     padding: 3rem;
   }
