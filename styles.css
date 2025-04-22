@@ -1,0 +1,117 @@
+/*========== CSS Reset ==========*/
+html,
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, auto) 1fr minmax(0, auto);
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Rosario", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+ol,
+ul {
+ list-style: none;
+}
+
+img,
+svg,
+video,
+canvas,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*========== Main Hero Section ==========*/
+.main-hero-section {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr);
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-hero-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.main-hero-section .main-hero-overlay {
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.main-hero-section .main-hero-content {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+  gap: 1.5rem;
+  width: 50%;
+}
+  
